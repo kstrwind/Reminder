@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/kstrwind/Reminder/router"
+	"github.com/kstrwind/Reminder/routers"
 	"log"
 )
 
@@ -15,7 +15,7 @@ func main() {
 	// recovery 中间件
 	r.Use(gin.Recovery())
 
-	router.InitRouter(r)
+	routers.InitRouter(r)
 
 	r.Run(":9090")
 }
